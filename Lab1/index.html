@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT Carnival Registration Form</title>
+    </head>
+
+    <body>
+        <h2>IT Carnival Registration Form</h2>
+
+        <form action="/register" method="POST" enctype="multipart/form-data">
+        
+        <label for="id">ID No.:</label>
+        <input type="text" id="id" name="ID" required><br><br>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="name" placeholder="Full Name" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" required>
+        <label for="female">Female</label><br><br>
+
+        <label>Department:</label><br>
+        <input type="radio" id="cse" name="department" value="CSE">
+        <label for="cse">CSE</label><br>
+        <input type="radio" id="eee" name="department" value="EEE">
+        <label for="eee">EEE</label><br>
+        <input type="radio" id="pharmacy" name="department" value="Pharmacy">
+        <label for="pharmacy">Pharmacy</label><br>
+        <input type="radio" id="bba" name="department" value="BBA">
+        <label for="bba">BBA</label><br>
+        <input type="radio" id="english" name="department" value="English">
+        <label for="english">English</label><br><br>
+
+        <label for="size">T-Shirt Size:</label>
+        <select id="size" name="size" required>
+            <option value="">Choose size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+        </select><br><br>
+
+        <label for="photo">Student Photo:</label>
+        <input type="file"><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" cols="30" rows="5"></textarea><br><br>
+
+        <label for="fb">Facebook ID (Profile URL):</label>
+        <input type="url" id="fb" name="fb" required><br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions.</label><br><br>
+
+        <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
