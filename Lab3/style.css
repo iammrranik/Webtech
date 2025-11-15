@@ -1,0 +1,341 @@
+
+/* =========================================================================
+    BASE LAYOUT & CONTAINER STYLES
+   ========================================================================= */
+body {
+    /* Set a light background for the whole page */
+    background-color: #f0f0f0;
+    /* Center the form content */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    /* Main form container background and border */
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 20px 30px;
+    /* Fixed width for the form */
+    width: 650px;
+}
+
+/* =========================================================================
+    HEADER & ACCENT STYLING
+   ========================================================================= */
+.required-info, .progress-steps {
+    /* Text size for header info */
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+/* Bright red color for required field asterisks */
+.required-star,
+.required-info .asterisk {
+    color: red; 
+    font-weight: bold;
+}
+
+/* Red, bold styling for main section headings */
+.section-heading {
+    color: red; 
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+}
+
+/* Highlights the active step in the progress bar */
+.progress-steps .active-step {
+    font-weight: bold;
+    color: black; 
+}
+
+/* Bolding for honorarium/memorial highlights (now used for Acknowledge Donation to) */
+.memorial-highlight {
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+/* Bold styling for sub-headers (e.g., Comments label) */
+.bold-header {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Soft gray color for secondary headers */
+.gray-header {
+    color: #666; 
+}
+
+/* Helper text styled within the label column */
+.helper-text-in-label {
+    display: block;
+    font-weight: normal !important; 
+    color: black;
+    font-size: 0.9em; 
+    padding-right: 0; 
+    text-align: right; 
+    line-height: 1.2;
+}
+
+
+/* =========================================================================
+    FORM LAYOUT: TWO-COLUMN GRID
+   ========================================================================= */
+.form-group {
+    /* Sets up label and input alignment */
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3px;
+}
+
+/* Fixed width and right-alignment for field labels */
+.form-group label {
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+/* Style for headers that occupy the label column but aren't <label> tags (like memorial header) */
+.label-only-header {
+    /* Match label width */
+    width: 150px; 
+    /* Match label padding/alignment */
+    text-align: right;
+    padding-right: 10px;
+    /* Match label font styles */
+    font-weight: bold;
+    font-size: 0.9em;
+    color: black;
+    /* Vertically align like a label */
+    padding-top: 4px; 
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Styles for the two-column headers (e.g., "How may we contact you?") */
+.label-column-header {
+    /* Match label width */
+    width: 150px; 
+    /* Match label padding/alignment */
+    text-align: right;
+    padding-right: 10px;
+    /* Use the standard bold header style */
+    font-weight: bold;
+    /* REDUCED FONT SIZE TO FIT ON ONE LINE */
+    font-size: 0.8em; 
+    color: black;
+    /* Vertically align header text like the start of a label */
+    padding-top: 4px; 
+}
+
+/* Style the gray header text specifically (for newsletter question) */
+.label-column-header.gray-header {
+    font-weight: bold; /* Keep it bold */
+    color: #666; /* Use gray color */
+    line-height: 1.2; /* Allows wrapping without cutting off lines */
+}
+
+/* Overrides: Remove bolding and fixed width for radio/checkbox labels */
+.indented-content label, 
+.radio-options label,
+.contact-options label {
+    font-weight: normal !important;
+    width: auto !important;
+}
+
+/* Ensures the "To Honor" and "In Memory of" radio button labels are not bold. */
+.radio-options-vertical label {
+    font-weight: normal !important;
+}
+
+/* Overrides: Normal weight for recurring details labels */
+.recurring-details label {
+    font-weight: normal !important;
+}
+
+/* Overrides: Normal weight for the main recurring checkbox label */
+.input-field input[type="checkbox"] + label[for="recurring"] {
+    font-weight: normal !important;
+}
+
+/* Style for the "Other Amount $" label next to the input */
+.input-field .amount-label {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+/* Input column takes remaining space */
+.input-field {
+    flex-grow: 1;
+}
+
+/* Base styles for all standard inputs and selects */
+.form-group input:not([type="checkbox"]):not([type="radio"]),
+.form-group select {
+    padding: 4px;
+    border: 1px solid #aaa;
+    max-width: 300px;
+    flex-grow: 1;
+    border-radius: 4px; 
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Higher rounding for dropdown menus */
+.form-group select {
+    border-radius: 10px; 
+}
+
+/* Custom width for amount inputs */
+.amount-input { max-width: 100px !important; }
+.recurring-input { max-width: 50px !important; }
+
+/* =========================================================================
+    FOCUS GLOW EFFECT
+   ========================================================================= */
+/* Blue glow effect on focused inputs, selects, and textareas */
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus {
+    outline: none; 
+    border-color: #3399ff; 
+    box-shadow: 0 0 5px rgba(51, 153, 255, 0.7); 
+}
+
+/* =========================================================================
+    HELPER TEXT AND INDENTATION
+   ========================================================================= */
+/* Small, black helper text for descriptions */
+.input-helper-text {
+    font-size: 0.7em; 
+    margin: 0;
+    color: black; 
+    padding-left: 2px;
+}
+
+/* Indent content to align with the start of the input column (160px) */
+.indented-content {
+    margin-left: 160px; 
+    padding-top: 5px;
+}
+
+/* Styling for left-aligned checkboxes in the Additional Info section */
+.left-aligned-checkboxes {
+    margin-bottom: 10px;
+}
+.left-aligned-checkboxes label {
+    font-weight: normal;
+}
+
+/* =========================================================================
+    COMMENTS SECTION LAYOUT
+   ========================================================================= */
+/* Container for the horizontal layout of comments label and textarea */
+.comments-group-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Fixed width for the comments label column */
+.comments-label-text {
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+    flex-shrink: 0;
+}
+
+/* Tweak vertical alignment for the comments bold header */
+.comments-label-text .bold-header {
+    margin-top: 0; 
+    padding-top: 10px; 
+    margin-bottom: 0;
+}
+
+/* Styling and sizing for the comments textarea */
+.comments-input-field {
+    width: 450px; 
+    height: 80px;
+    box-sizing: border-box; 
+    margin-top: 0;
+    flex-grow: 1;
+    border-radius: 4px; 
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* =========================================================================
+    FOOTER NOTES & BUTTONS
+   ========================================================================= */
+.footer-note {
+    /* Base style for all footer notes */
+    text-align: left;
+    font-size: 0.9em;
+    margin-top: 15px;
+    /* Default is 160px margin, but overridden below for security/support notes */
+    margin-left: 160px;
+}
+
+/* Styling for the support link */
+.footer-note a {
+    color: #666; 
+    text-decoration: underline; 
+}
+
+/* Aligns the first note (security) to the far left edge (0px margin) */
+.footer-note:first-of-type {
+    margin-left: 0; 
+    text-align: left;
+}
+
+/* Aligns the last note (support) to the far left edge of the container (0px margin) */
+.footer-note:last-of-type {
+    margin-left: 0; 
+    text-align: left;
+}
+
+/* Uses CSS Grid to structure buttons against the two-column form layout */
+.action-buttons {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr; 
+    gap: 10px; 
+}
+
+/* Base style for all buttons */
+.action-buttons button {
+    padding: 8px 15px;
+    margin: 0; 
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 15px; 
+}
+
+/* Reset Button: Aligns to the right of the label column */
+.action-buttons button:first-child {
+    grid-column: 1; 
+    justify-self: end; 
+}
+
+/* Continue Button: Aligns to the left of the input column */
+.action-buttons button:last-child {
+    grid-column: 2; 
+    justify-self: start; 
+}
+
+/* Styling for the primary action button (Continue) */
+.action-buttons button[type="submit"] {
+    background-color: darkred;
+    color: white;
+    border: 1px solid darkred;
+}
