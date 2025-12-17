@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16 - Simplified Theme Toggle</title>
+    
+    <style>
+        /* Light Mode Styles */
+        .light-mode {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #222;
+            color: #f4f4f4;
+        }
+
+        /* General Layout Styling */
+        body {
+            font-family: sans-serif;
+            transition: 0.5s; /* Smooth color fade */
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            padding: 30px;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="light-mode" id="pageBody">
+
+    <div class="container">
+        <h1>Theme Toggle</h1>
+        <p>This lab demonstrates changing themes using a simple internal stylesheet.</p>
+        
+        <button id="themeBtn" onclick="toggleTheme()">Switch to Dark Mode</button>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.getElementById('pageBody');
+            const btn = document.getElementById('themeBtn');
+
+            // Logic to switch classes and button text
+            if (body.classList.contains('light-mode')) {
+                body.classList.replace('light-mode', 'dark-mode');
+                btn.innerText = "Switch to Light Mode";
+            } else {
+                body.classList.replace('dark-mode', 'light-mode');
+                btn.innerText = "Switch to Dark Mode";
+            }
+        }
+    </script>
+
+</body>
+</html>

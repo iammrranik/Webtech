@@ -1,0 +1,80 @@
+/* General Body and Font Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; 
+    margin: 0; 
+    padding: 0;
+}
+
+/* 2. Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0; 
+    margin-bottom: 25px; 
+}
+
+header h1 {
+    font-size: 1.8em; 
+}
+
+/* 4. Profile Section Layout and Box Model */
+#profile-container {
+    /* Fixed Width and Center Alignment */
+    width: 600px; 
+    margin: 30px auto; 
+    
+    /* Light Background Color */
+    background-color: #ffffff; 
+
+    /* Box Model: Border, Padding */
+    border: 2px solid #5cb85c; 
+    border-radius: 8px; 
+    padding: 25px; 
+
+    text-align: center;
+}
+
+/* Profile Photo Styling (UPDATED WIDTH AND HEIGHT) */
+#student-photo {
+    /* Set image dimensions explicitly */
+    width: 150px; 
+    height: 150px;
+
+    /* Round the student image corners */
+    border-radius: 50%; /* Makes the image circular */
+    display: block; 
+    margin: 10px auto 20px;
+    border: 3px solid #007bff;
+}
+
+/* Text Sizing using CSS units */
+#profile-container h2 {
+    font-size: 1.5em; 
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+#profile-container p {
+    font-size: 14px; 
+    line-height: 1.6;
+}
+
+/* Bio Section Styling */
+#bio {
+    text-align: left; 
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+}
+
+/* 2. Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 50px; 
+    width: 100%; 
+}

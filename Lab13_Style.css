@@ -1,0 +1,43 @@
+/* Step 2, 3, & 5: Position fixed and basic styling */
+.contact-widget {
+    position: fixed;        /* Locks the box to the viewport */
+    bottom: 20px;           /* 20px from the bottom edge */
+    right: 20px;            /* 20px from the right edge */
+    
+    width: 200px;
+    background-color: #2c3e50; /* Stand-out dark color */
+    color: white;
+    padding: 15px;
+    border: 2px solid #34495e;
+    border-radius: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    /* Step 4: Keep above other content */
+    z-index: 9999;          
+    
+    transition: background-color 0.3s ease;
+}
+
+.contact-widget h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.contact-widget p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.contact-widget a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Step 6: Hover effect */
+.contact-widget:hover {
+    background-color: #1a252f; /* Darker shade on hover */
+    cursor: pointer;
+}

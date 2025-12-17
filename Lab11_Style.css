@@ -1,0 +1,25 @@
+/* Step 6 & 7: Full-width background styling */
+.nav-container {
+    background-color: #333;    /* Dark background */
+    width: 100%;               /* Spans full page width */
+    display: block;            /* Block-level element */
+    text-align: center;        /* Centers the links within the bar */
+    padding: 10px 0;
+}
+
+/* Step 2, 3, & 4: Link spacing and removal of underlines */
+.nav-container a {
+    display: inline-block;     /* Arranges links horizontally */
+    color: white;
+    text-decoration: none;     /* Removes underlines */
+    padding: 12px 20px;        /* Spacing inside links */
+    margin: 0 5px;             /* Spacing between links */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Step 5: Hover effects */
+.nav-container a:hover {
+    background-color: #575757; /* Subtle grey background change */
+    color: #ffca28;            /* Golden text color change */
+    border-radius: 5px;
+}

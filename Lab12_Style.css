@@ -1,0 +1,58 @@
+/* Container for alignment */
+.product-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Product Box Styling */
+.product-box {
+    display: inline-block;
+    width: 280px;              /* Slightly wider to fit images nicely */
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* FIX: Image Height and Width */
+.product-box img {
+    width: 100%;               /* Takes full width of the card */
+    height: 200px;             /* Fixed height for uniformity */
+    object-fit: contain;       /* 'contain' keeps the whole image visible; 
+                                  use 'cover' if you want it to fill the box entirely */
+    background-color: white;   /* Gives a clean look to transparent images */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Hover effects with Outline */
+.product-box:hover {
+    outline: 3px solid #3498db;
+    outline-offset: 10px;
+}
+
+/* Price and Button Styling */
+.price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.2rem;
+}
+
+.buy-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #2980b9;
+}
